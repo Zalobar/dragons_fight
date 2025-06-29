@@ -11,8 +11,6 @@ def main():
     for dragon in dragons:
         describe(dragon)
 
-    for dragon in dragons:
-        dragon.breathe_fire(3, 3, dragons)
     
     for dragon in dragons:
         other_dragons = [d for d in dragons if d is not dragon]
@@ -22,6 +20,7 @@ def main():
 
 
 def describe(dragon):
+    print("\n-> Begin Describe Method <-")
     print(f"{dragon.name} is at {dragon.pos_x}/{dragon.pos_y}")
 
 
@@ -46,6 +45,7 @@ class Dragon(Unit):
         self.__fire_range = fire_range
 
     def breathe_fire(self, x, y, units):
+        print("\n-> Begin Breathe Fire Method <-")
         print("====================================")
         print(f"{self.name} breathes fire at {x}/{y} with range {self.__fire_range}")
         print("------------------------------------")
